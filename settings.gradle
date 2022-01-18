@@ -1,0 +1,6 @@
+include ':networklib'
+include ':animationlib'
+include ':myviewlib'
+rootProject.name = "WmdingApplication"
+include ':app'
+include ':commonlib'
