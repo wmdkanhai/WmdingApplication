@@ -2,8 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         package="com.wmding.commonlib">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application>
-        <activity android:name=".ImageViewActivity"></activity>
+        <activity android:name=".ImageViewActivity" />
         <activity
                 android:name=".CommonActivity"
                 android:launchMode="standard" />

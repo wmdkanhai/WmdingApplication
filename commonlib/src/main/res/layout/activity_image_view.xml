@@ -6,4 +6,37 @@
         android:layout_height="match_parent"
         tools:context=".ImageViewActivity">
 
+    <Button
+            android:onClick="loadLocalImage"
+            android:text="加载本地图片"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_get_image_data"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintVertical_bias="0.01" />
+
+    <Button
+            android:onClick="loadNetImage"
+            android:text="加载网络图片"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintVertical_bias="0.01"
+            app:layout_constraintStart_toEndOf="@+id/btn_get_image_data" />
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_get_image_data" />
 </androidx.constraintlayout.widget.ConstraintLayout>
