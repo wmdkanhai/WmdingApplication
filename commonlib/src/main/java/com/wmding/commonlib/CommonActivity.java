@@ -33,9 +33,12 @@ public class CommonActivity extends AppCompatActivity {
     }
 
     public void handler(View view) {
-
+        Intent intent = new Intent(this, HandlerTestActivity.class);
+        startActivity(intent);
     }
 
     public void imageView(View view) {
+        Intent intent = new Intent(this, ImageViewActivity.class);
+        startActivity(intent);
     }
 }
