@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
@@ -14,7 +15,13 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.wmding.commonlib.utils.BitmapUtil;
+import com.wmding.commonlib.utils.ImageUtil;
+import com.wmding.commonlib.utils.MemoryUtil;
 import com.wmding.commonlib.utils.MyLog;
+import com.wmding.commonlib.utils.ScreenUtil;
+
+import java.util.HashMap;
 
 /**
  * @author wmding
@@ -66,13 +73,19 @@ public class ImageViewActivity extends AppCompatActivity {
 
         // 方式三：setImageBitmap
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.image1);
-        imageView.setImageBitmap(bitmap);
-
         int width = bitmap.getWidth();
         int height = bitmap.getHeight();
+        // 图片实际大小：1000 * 1000
         MyLog.info(String.format("bitmap width: %d,height: %d", width, height));
 
-        getScreenData();
+        imageView.setImageBitmap(bitmap);
+
+        // 获取屏幕信息
+        HashMap screenData = ScreenUtil.getScreenData(this);
+        int width1 = (int) screenData.get("width");
+        int height1 = (int) screenData.get("height");
+        MyLog.info(String.format("屏幕 width1: %d,height2: %d", width1, height1));
+
     }
 
     /**
@@ -89,15 +102,46 @@ public class ImageViewActivity extends AppCompatActivity {
 
 
     /**
-     * 获取屏幕大小
-     * https://www.jianshu.com/p/385ea4e8d2ba
+     * 根据控件大小加载图片
+     *
+     * @param view
      */
-    private void getScreenData(){
-        WindowManager mWindowManager  = (WindowManager) this.getSystemService(Context.WINDOW_SERVICE);
-        DisplayMetrics metrics = new DisplayMetrics();
-        mWindowManager.getDefaultDisplay().getMetrics(metrics);
-        int width = metrics.widthPixels;//获取到的是px，像素，绝对像素，需要转化为dpi
-        int height = metrics.heightPixels;
-        MyLog.info(String.format("screen width: %d,height: %d", width, height));
+    public void loadImage(View view) {
+
+        // 获取当前控件的大小
+        int width1 = imageView.getWidth();
+        int height1 = imageView.getHeight();
+        MyLog.info(String.format("imageView width1: %d,height1: %d", width1, height1));
+
+        // 获取缩放后的大小
+        Bitmap bitmap1 = BitmapUtil.decodeSampledBitmapFromResource(getResources(), R.drawable.image1, width1, height1);
+        imageView.setImageBitmap(bitmap1);
+    }
+
+
+    public void compressImage(View view) {
+
+        String s = MemoryUtil.printMemInfo();
+        MyLog.error(s);
+
+
+        long startTime = System.currentTimeMillis();
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.image1);
+        MyLog.info("bitmap");
+        byte[] bytes = BitmapUtil.bitmapToByte(bitmap);
+        MyLog.info("压缩前：bytes: " + bytes.length);
+
+        byte[] bytes1 = ImageUtil.compressPng(bytes, imageView.getWidth(), imageView.getHeight());
+        MyLog.info("压缩后：bytes1: " + bytes1.length);
+
+        Bitmap bitmap1 = BitmapUtil.byteToBitmap(bytes1);
+
+        long endTime = System.currentTimeMillis();
+
+        MyLog.info("时间花费（ms）：" + (endTime - startTime));
+
+        imageView.setImageBitmap(bitmap1);
+
+        MemoryUtil.printMemoryInfo(this);
     }
 }
