@@ -19,4 +19,10 @@ public class AnimationActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PropertyAnimationActivity.class);
         startActivity(intent);
     }
+
+    //View动画
+    public void viewAnimation(View view) {
+        Intent intent = new Intent(this, ViewAnimationActivity.class);
+        startActivity(intent);
+    }
 }
