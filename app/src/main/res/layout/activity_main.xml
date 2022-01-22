@@ -59,16 +59,4 @@
             android:layout_width="match_parent"
             android:layout_height="1dp" />
 
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-
-    </LinearLayout>
-
-    <View
-            android:background="#ccc"
-            android:layout_width="match_parent"
-            android:layout_height="1dp" />
 </LinearLayout>
