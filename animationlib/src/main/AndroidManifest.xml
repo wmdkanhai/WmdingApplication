@@ -3,9 +3,10 @@
         package="com.wmding.animationlib">
 
     <application>
+        <activity android:name=".FrameAnimationActivity"></activity>
         <activity android:name=".PropertyAnimationActivity" />
         <activity android:name=".AnimationActivity" />
-        <activity android:name=".ViewAnimationActivity"/>
+        <activity android:name=".ViewAnimationActivity" />
     </application>
 
 </manifest>

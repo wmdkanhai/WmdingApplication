@@ -25,4 +25,10 @@ public class AnimationActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ViewAnimationActivity.class);
         startActivity(intent);
     }
+
+    //帧动画
+    public void fragmentAnimation(View view) {
+        Intent intent = new Intent(this, FrameAnimationActivity.class);
+        startActivity(intent);
+    }
 }
