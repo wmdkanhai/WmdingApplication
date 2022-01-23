@@ -31,4 +31,9 @@ public class AnimationActivity extends AppCompatActivity {
         Intent intent = new Intent(this, FrameAnimationActivity.class);
         startActivity(intent);
     }
+
+    public void spinKitView(View view) {
+        Intent intent = new Intent(this, SpinKitViewActivity.class);
+        startActivity(intent);
+    }
 }
