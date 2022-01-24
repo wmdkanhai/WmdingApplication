@@ -7,11 +7,40 @@
         tools:context=".MyViewActivity">
 
     <Button
+            android:onClick="myView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="自定义view"
+            android:text="组合控件"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintVertical_bias="0.01"
+            android:id="@+id/button" />
+
+    <Button
+            android:id="@+id/button2"
+            android:onClick="myView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="继承控件"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintVertical_bias="0.01"
+            app:layout_constraintStart_toEndOf="@+id/button" />
+
+    <Button
+            android:onClick="myView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自绘控件"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintVertical_bias="0.01"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            app:layout_constraintStart_toStartOf="@+id/button" />
 </androidx.constraintlayout.widget.ConstraintLayout>

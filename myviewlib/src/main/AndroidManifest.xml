@@ -3,7 +3,12 @@
         package="com.wmding.myviewlib">
 
     <application>
-        <activity android:name=".MyViewActivity"></activity>
+        <activity android:name=".MyViewActivity" />
+        <activity
+                android:name=".MyView1Activity"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MyView2Activity" />
+        <activity android:name=".MyView3Activity"/>
     </application>
 
 </manifest>
