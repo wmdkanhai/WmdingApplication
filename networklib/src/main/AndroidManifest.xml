@@ -2,8 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         package="com.wmding.networklib">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application>
-        <activity android:name=".NetworkActivity"></activity>
+        <activity android:name=".NetworkActivity" />
+        <activity android:name=".RetrofitTestActivity" />
+        <activity android:name=".OkHttpTestActivity" />
     </application>
 
 </manifest>

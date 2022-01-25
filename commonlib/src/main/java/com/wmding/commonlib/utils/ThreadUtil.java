@@ -68,7 +68,7 @@ public class ThreadUtil {
 
         @Override
         public Thread newThread(Runnable r) {
-            Thread t = new Thread(r, "etds-thread-" + mThreadNum.getAndIncrement());
+            Thread t = new Thread(r, "WmdingApplication-thread-" + mThreadNum.getAndIncrement());
             return t;
         }
     }
