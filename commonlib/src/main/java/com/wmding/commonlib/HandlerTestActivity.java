@@ -3,7 +3,6 @@ package com.wmding.commonlib;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -16,6 +15,11 @@ import com.wmding.commonlib.utils.ThreadUtil;
 
 import java.lang.ref.WeakReference;
 
+/**
+ * @author wmding
+ * @date 1/26/22 9:59 AM
+ * @describe Handler 通信
+ */
 public class HandlerTestActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView textView;

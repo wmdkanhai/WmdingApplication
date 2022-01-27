@@ -3,6 +3,7 @@
         package="com.wmding.commonlib">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application>
         <activity android:name=".ImageViewActivity" />
         <activity
@@ -11,6 +12,7 @@
         <activity android:name=".SecondActivity" />
         <activity android:name=".FirstActivity" />
         <activity android:name=".HandlerTestActivity" />
+        <activity android:name=".FileTestActivity" />
     </application>
 
 </manifest>

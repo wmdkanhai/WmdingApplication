@@ -53,9 +53,9 @@ public class MemoryUtil {
      * VmallocChunk:     205828 kB
      */
     public static String printMemInfo() {
-        String info = FileUtil.getFileOutputString(MEM_INFO_PATH);
+        StringBuilder info = FileUtils.readFile(MEM_INFO_PATH,"utf-8");
         Log.i(TAG, "_______  内存信息:   \n" + info);
-        return info;
+        return info.toString();
     }
 
     /**

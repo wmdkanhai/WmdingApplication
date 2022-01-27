@@ -10,9 +10,9 @@ import android.view.View;
  * @author wmding
  * @date 1/18/22
  * @describe
- * 1、Activity声明周期相关内容
- * 2、Activity启动方式
- * 3、
+ * 1、Activity声明周期相关内容，2、Activity启动方式
+ * 2、handler
+ * 3、imageView
  */
 public class CommonActivity extends AppCompatActivity {
 
@@ -39,6 +39,11 @@ public class CommonActivity extends AppCompatActivity {
 
     public void imageView(View view) {
         Intent intent = new Intent(this, ImageViewActivity.class);
+        startActivity(intent);
+    }
+
+    public void fileTest(View view) {
+        Intent intent = new Intent(this, FileTestActivity.class);
         startActivity(intent);
     }
 }

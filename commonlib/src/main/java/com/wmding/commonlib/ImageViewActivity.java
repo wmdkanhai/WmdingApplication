@@ -3,15 +3,11 @@ package com.wmding.commonlib;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;

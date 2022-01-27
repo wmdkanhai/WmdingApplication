@@ -8,8 +8,6 @@ import android.view.View;
 
 import com.wmding.commonlib.utils.MyLog;
 
-import java.time.Instant;
-
 public class FirstActivity extends AppCompatActivity {
 
     @Override
