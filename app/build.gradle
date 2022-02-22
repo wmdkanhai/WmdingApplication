@@ -40,4 +40,7 @@ dependencies {
     implementation project(path: ':commonlib')
     implementation project(path: ':myviewlib')
     implementation project(path: ':animationlib')
+
+    // LocalBroadcastManager 需要的依赖
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 }
