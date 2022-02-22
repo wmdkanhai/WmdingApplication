@@ -23,4 +23,9 @@ public class NetworkActivity extends AppCompatActivity {
         Intent intent = new Intent(this, RetrofitTestActivity.class);
         startActivity(intent);
     }
+
+    public void btnVolley(View view) {
+        Intent intent = new Intent(this, VolleyActivity.class);
+        startActivity(intent);
+    }
 }

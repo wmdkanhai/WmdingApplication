@@ -4,15 +4,14 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".NetworkActivity">
+        tools:context=".VolleyActivity">
 
     <Button
-            android:textAllCaps="false"
-            android:onClick="btnOkHttp"
-            android:text="OkHttp"
+            android:onClick="btnGet"
+            android:text="Get"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_okhttp"
+            android:id="@+id/btn_get"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -21,30 +20,15 @@
             app:layout_constraintVertical_bias="0.01" />
 
     <Button
-            android:textAllCaps="false"
-            android:onClick="btnRetrofit"
-            android:text="Retrofit"
+            android:onClick="btnPost"
+            android:text="Post"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_retrofit"
+            android:id="@+id/btn_post"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.01"
             app:layout_constraintVertical_bias="0.01"
-            app:layout_constraintStart_toEndOf="@+id/btn_okhttp" />
-
-    <Button
-            android:textAllCaps="false"
-            android:onClick="btnVolley"
-            android:text="volley"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_volley"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.01"
-            app:layout_constraintVertical_bias="0.01"
-            app:layout_constraintStart_toEndOf="@+id/btn_retrofit" />
+            app:layout_constraintStart_toEndOf="@+id/btn_get" />
 </androidx.constraintlayout.widget.ConstraintLayout>
