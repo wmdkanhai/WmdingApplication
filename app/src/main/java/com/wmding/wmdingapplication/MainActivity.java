@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.wmding.animationlib.AnimationActivity;
-import com.wmding.broadcastreceiverlib.BroadcastReceiverActivity;
+import com.wmding.broadcastreceiverlib.ReceiverMenuActivity;
 import com.wmding.commonlib.CommonActivity;
 import com.wmding.myviewlib.MyViewActivity;
 import com.wmding.networklib.NetworkActivity;
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void test5(View view) {
-        Intent intent = new Intent(this, BroadcastReceiverActivity.class);
+        Intent intent = new Intent(this, ReceiverMenuActivity.class);
         startActivity(intent);
     }
 }

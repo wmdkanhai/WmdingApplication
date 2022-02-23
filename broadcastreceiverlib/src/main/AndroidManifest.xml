@@ -3,8 +3,12 @@
         package="com.wmding.broadcastreceiverlib">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application>
+        <activity android:name=".ReceiverMenuActivity" />
         <activity android:name=".BroadcastReceiverActivity" />
+        <activity android:name=".HomeActivity"/>
+        <activity android:name=".LoginActivity" />
     </application>
 
 </manifest>
