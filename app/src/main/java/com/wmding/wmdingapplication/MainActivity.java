@@ -9,6 +9,7 @@ import android.view.View;
 import com.wmding.animationlib.AnimationActivity;
 import com.wmding.broadcastreceiverlib.ReceiverMenuActivity;
 import com.wmding.commonlib.CommonActivity;
+import com.wmding.contentresolverlib.ContentResolverActivity;
 import com.wmding.myviewlib.MyViewActivity;
 import com.wmding.networklib.NetworkActivity;
 
@@ -62,6 +63,11 @@ public class MainActivity extends AppCompatActivity {
      */
     public void test5(View view) {
         Intent intent = new Intent(this, ReceiverMenuActivity.class);
+        startActivity(intent);
+    }
+
+    public void test6(View view) {
+        Intent intent = new Intent(this, ContentResolverActivity.class);
         startActivity(intent);
     }
 }

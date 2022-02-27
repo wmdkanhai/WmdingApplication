@@ -46,4 +46,7 @@ dependencies {
 
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
 
+    implementation "com.github.permissions-dispatcher:permissionsdispatcher:4.9.1"
+    annotationProcessor "com.github.permissions-dispatcher:permissionsdispatcher-processor:4.9.1"
+
 }
