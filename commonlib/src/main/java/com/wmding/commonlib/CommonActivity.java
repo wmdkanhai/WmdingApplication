@@ -46,4 +46,9 @@ public class CommonActivity extends AppCompatActivity {
         Intent intent = new Intent(this, FileTestActivity.class);
         startActivity(intent);
     }
+
+    public void notificationTest(View view) {
+        Intent intent = new Intent(this, NotificationActivity.class);
+        startActivity(intent);
+    }
 }

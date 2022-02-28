@@ -73,7 +73,7 @@ public class ContactsActivity extends AppCompatActivity {
      * @param request
      */
     @OnShowRationale(Manifest.permission.READ_CONTACTS)
-    public void showRationaleForContacts(PermissionRequest request) {
+    public void showRationaleForContacts(final PermissionRequest request) {
         showRationaleDialog("需要读取联系人权限", request);
     }
 
@@ -96,11 +96,10 @@ public class ContactsActivity extends AppCompatActivity {
     }
 
 
-    private void showRationaleDialog(String message, PermissionRequest request) {
+    public void showRationaleDialog(String message, PermissionRequest request) {
         new AlertDialog.Builder(this).setPositiveButton("确定", new OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
                 request.proceed();
             }
         }).setNegativeButton("拒绝", new OnClickListener() {

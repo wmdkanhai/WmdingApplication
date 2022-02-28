@@ -3,7 +3,10 @@
         package="com.wmding.contentresolverlib">
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application>
+        <activity android:name=".CameraActivity"></activity>
         <activity android:name=".ContactsActivity" />
         <activity android:name=".ContentResolverActivity" />
     </application>

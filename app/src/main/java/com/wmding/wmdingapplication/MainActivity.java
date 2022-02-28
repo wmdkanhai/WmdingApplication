@@ -9,9 +9,12 @@ import android.view.View;
 import com.wmding.animationlib.AnimationActivity;
 import com.wmding.broadcastreceiverlib.ReceiverMenuActivity;
 import com.wmding.commonlib.CommonActivity;
+import com.wmding.commonlib.utils.MyLog;
 import com.wmding.contentresolverlib.ContentResolverActivity;
 import com.wmding.myviewlib.MyViewActivity;
 import com.wmding.networklib.NetworkActivity;
+
+import static com.wmding.commonlib.utils.AndroidUtil.printSystemInfo;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +22,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        initData();
+    }
+
+    private void initData() {
+        String s = printSystemInfo();
+        MyLog.error(s);
     }
 
     public void test1(View view) {

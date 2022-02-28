@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application>
+        <activity android:name=".NotificationActivity"></activity>
         <activity android:name=".ImageViewActivity" />
         <activity
                 android:name=".CommonActivity"

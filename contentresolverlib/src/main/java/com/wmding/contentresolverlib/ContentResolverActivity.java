@@ -18,4 +18,9 @@ public class ContentResolverActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ContactsActivity.class);
         startActivity(intent);
     }
+
+    public void camera(View view) {
+        Intent intent = new Intent(this, CameraActivity.class);
+        startActivity(intent);
+    }
 }
