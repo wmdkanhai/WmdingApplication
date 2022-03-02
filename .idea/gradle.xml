@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/broadcastreceiverlib" />
             <option value="$PROJECT_DIR$/commonlib" />
             <option value="$PROJECT_DIR$/contentresolverlib" />
+            <option value="$PROJECT_DIR$/medialib" />
             <option value="$PROJECT_DIR$/myviewlib" />
             <option value="$PROJECT_DIR$/networklib" />
           </set>

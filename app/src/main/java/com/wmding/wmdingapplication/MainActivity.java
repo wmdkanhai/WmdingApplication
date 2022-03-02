@@ -11,6 +11,7 @@ import com.wmding.broadcastreceiverlib.ReceiverMenuActivity;
 import com.wmding.commonlib.CommonActivity;
 import com.wmding.commonlib.utils.MyLog;
 import com.wmding.contentresolverlib.ContentResolverActivity;
+import com.wmding.medialib.MediaActivity;
 import com.wmding.myviewlib.MyViewActivity;
 import com.wmding.networklib.NetworkActivity;
 
@@ -76,8 +77,21 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     * 内容提供者
+     * @param view
+     */
     public void test6(View view) {
         Intent intent = new Intent(this, ContentResolverActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 多媒体相关
+     * @param view
+     */
+    public void test7(View view) {
+        Intent intent = new Intent(this, MediaActivity.class);
         startActivity(intent);
     }
 }
