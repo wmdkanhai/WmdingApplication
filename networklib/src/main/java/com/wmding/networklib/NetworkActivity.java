@@ -28,4 +28,9 @@ public class NetworkActivity extends AppCompatActivity {
         Intent intent = new Intent(this, VolleyActivity.class);
         startActivity(intent);
     }
+
+    public void btnWebView(View view) {
+        Intent intent = new Intent(this, WebViewActivity.class);
+        startActivity(intent);
+    }
 }

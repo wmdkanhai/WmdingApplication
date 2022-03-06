@@ -19,4 +19,19 @@ public class MediaActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    public void choosePhoto(View view) {
+        Intent intent = new Intent(this, ChoosePhotoFromAlbumActivity.class);
+        startActivity(intent);
+    }
+
+    public void mediaPlay1(View view) {
+        Intent intent = new Intent(this, MediaPlayerActivity.class);
+        startActivity(intent);
+    }
+
+    public void mediaPlay2(View view) {
+        Intent intent = new Intent(this, MeadiPlay2Activity.class);
+        startActivity(intent);
+    }
 }

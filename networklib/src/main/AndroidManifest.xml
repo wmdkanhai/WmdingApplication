@@ -8,6 +8,7 @@
         <activity android:name=".RetrofitTestActivity" />
         <activity android:name=".OkHttpTestActivity" />
         <activity android:name=".VolleyActivity" />
+        <activity android:name=".WebViewActivity" android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

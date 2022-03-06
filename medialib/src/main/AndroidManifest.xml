@@ -5,18 +5,19 @@
     <application>
         <activity android:name=".MediaActivity" />
         <activity android:name=".CameraTestActivity" />
+        <activity android:name=".ChoosePhotoFromAlbumActivity" />
+        <activity android:name=".MediaPlayerActivity" />
+        <activity android:name=".MeadiPlay2Activity"/>
 
         <provider
                 android:name="androidx.core.content.FileProvider"
                 android:authorities="com.wmding.medialib.fileprovider"
                 android:exported="false"
                 android:grantUriPermissions="true">
-
             <meta-data
                     android:name="android.support.FILE_PROVIDER_PATHS"
                     android:resource="@xml/file_paths" />
         </provider>
     </application>
-
 
 </manifest>
