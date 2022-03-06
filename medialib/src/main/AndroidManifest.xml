@@ -2,12 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         package="com.wmding.medialib">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <application>
         <activity android:name=".MediaActivity" />
         <activity android:name=".CameraTestActivity" />
         <activity android:name=".ChoosePhotoFromAlbumActivity" />
         <activity android:name=".MediaPlayerActivity" />
-        <activity android:name=".MeadiPlay2Activity"/>
+        <activity android:name=".MeadiPlay2Activity" />
 
         <provider
                 android:name="androidx.core.content.FileProvider"
