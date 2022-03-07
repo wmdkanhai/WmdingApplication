@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MeadiPlay2Activity extends AppCompatActivity {
+public class MediaPlayer2Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_meadi_play2);
+        setContentView(R.layout.activity_media_player2);
     }
 }

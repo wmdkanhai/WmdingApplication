@@ -33,7 +33,7 @@
             android:id="@+id/button4" />
 
     <Button
-            android:text="播放音频"
+            android:text="音频"
             android:onClick="mediaPlay1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

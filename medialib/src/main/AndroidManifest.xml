@@ -3,12 +3,13 @@
         package="com.wmding.medialib">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <application>
         <activity android:name=".MediaActivity" />
         <activity android:name=".CameraTestActivity" />
         <activity android:name=".ChoosePhotoFromAlbumActivity" />
         <activity android:name=".MediaPlayerActivity" />
-        <activity android:name=".MeadiPlay2Activity" />
+        <activity android:name=".MediaPlayer2Activity" />
 
         <provider
                 android:name="androidx.core.content.FileProvider"
