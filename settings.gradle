@@ -1,3 +1,4 @@
+include ':servicelib'
 include ':medialib'
 include ':contentresolverlib'
 include ':broadcastreceiverlib'

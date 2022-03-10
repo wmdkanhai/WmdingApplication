@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.wmding.servicelib">
+
+    <application>
+        <service
+                android:name=".service.MyService"
+                android:enabled="true"
+                android:exported="true"/>
+
+        <activity android:name=".ServiceTest1Activity" />
+        <activity android:name=".ServiceMainActivity" />
+    </application>
+
+</manifest>

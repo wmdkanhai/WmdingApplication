@@ -14,6 +14,7 @@ import com.wmding.contentresolverlib.ContentResolverActivity;
 import com.wmding.medialib.MediaActivity;
 import com.wmding.myviewlib.MyViewActivity;
 import com.wmding.networklib.NetworkActivity;
+import com.wmding.servicelib.ServiceMainActivity;
 
 import static com.wmding.commonlib.utils.AndroidUtil.printSystemInfo;
 
@@ -92,6 +93,11 @@ public class MainActivity extends AppCompatActivity {
      */
     public void test7(View view) {
         Intent intent = new Intent(this, MediaActivity.class);
+        startActivity(intent);
+    }
+
+    public void test8(View view) {
+        Intent intent = new Intent(this, ServiceMainActivity.class);
         startActivity(intent);
     }
 }
