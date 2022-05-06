@@ -2,19 +2,24 @@ package com.wmding.wmdingapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActivityManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.facebook.device.yearclass.YearClass;
 import com.wmding.animationlib.AnimationActivity;
 import com.wmding.broadcastreceiverlib.ReceiverMenuActivity;
 import com.wmding.commonlib.CommonActivity;
+import com.wmding.commonlib.utils.MemoryUtil;
 import com.wmding.commonlib.utils.MyLog;
 import com.wmding.contentresolverlib.ContentResolverActivity;
 import com.wmding.medialib.MediaActivity;
 import com.wmding.myviewlib.MyViewActivity;
 import com.wmding.networklib.NetworkActivity;
 import com.wmding.servicelib.ServiceMainActivity;
+
+import java.time.YearMonth;
 
 import static com.wmding.commonlib.utils.AndroidUtil.printSystemInfo;
 
@@ -24,13 +29,28 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         initData();
     }
 
     private void initData() {
-        String s = printSystemInfo();
-        MyLog.error(s);
+        String systemInfo = printSystemInfo();
+        MyLog.info("系统信息: " + systemInfo);
+
+        MemoryUtil.printMemoryInfo(this.getApplication());
+
+        int year = YearClass.get(this.getApplication());
+        MyLog.info("year: " + year);
+        if (year >= YearClass.CLASS_2016) {
+            // 配置较高的手机可以 开启复杂的动画 或 "重功能"。
+            // 通常来说，从 2016年开始 的手机配置就比较好了，
+            // 我们统一按照这个模板使用即可。
+
+
+        } else {
+            // 低端机用户可以 关闭复杂的动画 或 "重功能"、在系统资源不够时我们应该主动去做降级处理。
+
+        }
+
     }
 
     public void test1(View view) {

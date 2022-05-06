@@ -33,6 +33,7 @@
             app:layout_constraintStart_toEndOf="@+id/button" />
 
     <Button
+            android:id="@+id/button3"
             android:onClick="myView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,4 +44,16 @@
             app:layout_constraintVertical_bias="0.01"
             app:layout_constraintTop_toBottomOf="@+id/button"
             app:layout_constraintStart_toStartOf="@+id/button" />
+
+    <Button
+            android:onClick="myView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="simpleImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintVertical_bias="0.01"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            app:layout_constraintStart_toEndOf="@+id/button3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

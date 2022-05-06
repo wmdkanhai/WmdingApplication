@@ -24,6 +24,11 @@ public class ServiceTest1Activity extends AppCompatActivity {
 
     private ServiceConnection connection = new ServiceConnection() {
 
+        /**
+         * 绑定成功时调用
+         * @param name
+         * @param service
+         */
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             MyLog.info("onServiceConnected");
@@ -35,6 +40,10 @@ public class ServiceTest1Activity extends AppCompatActivity {
             MyLog.info("downloadBinder.getData: " + str);
         }
 
+        /**
+         * 解绑时调用
+         * @param name
+         */
         @Override
         public void onServiceDisconnected(ComponentName name) {
 

@@ -28,4 +28,9 @@ public class MyViewActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MyView3Activity.class);
         startActivity(intent);
     }
+
+    public void myView4(View view) {
+        Intent intent = new Intent(this, SimpleImageViewTestActivity.class);
+        startActivity(intent);
+    }
 }
