@@ -113,4 +113,18 @@
             android:layout_width="match_parent"
             android:layout_height="1dp" />
 
+    <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:onClick="kotlinTest"
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kotlin" />
+
+    </LinearLayout>
+
 </LinearLayout>

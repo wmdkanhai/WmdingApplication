@@ -1,3 +1,4 @@
+include ':mykotlin'
 include ':servicelib'
 include ':medialib'
 include ':contentresolverlib'

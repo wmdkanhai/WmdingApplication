@@ -2,7 +2,6 @@ package com.wmding.wmdingapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ActivityManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,11 +14,10 @@ import com.wmding.commonlib.utils.MemoryUtil;
 import com.wmding.commonlib.utils.MyLog;
 import com.wmding.contentresolverlib.ContentResolverActivity;
 import com.wmding.medialib.MediaActivity;
+import com.wmding.mykotlin.FirstActivity;
 import com.wmding.myviewlib.MyViewActivity;
 import com.wmding.networklib.NetworkActivity;
 import com.wmding.servicelib.ServiceMainActivity;
-
-import java.time.YearMonth;
 
 import static com.wmding.commonlib.utils.AndroidUtil.printSystemInfo;
 
@@ -118,6 +116,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void test8(View view) {
         Intent intent = new Intent(this, ServiceMainActivity.class);
+        startActivity(intent);
+    }
+
+    public void kotlinTest(View view) {
+        Intent intent = new Intent(this, com.wmding.mykotlin.FirstActivity.class);
         startActivity(intent);
     }
 }
