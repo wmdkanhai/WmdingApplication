@@ -1,5 +1,6 @@
 package com.wmding.mykotlin
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +8,10 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.wmding.commonlib.utils.MyLog
+import com.wmding.mykotlin.util.Util1
+import com.wmding.mykotlin.util.test1
 import kotlinx.android.synthetic.main.activity_kt_first.*
 
 class FirstActivity : AppCompatActivity() {
@@ -16,11 +20,23 @@ class FirstActivity : AppCompatActivity() {
         setContentView(R.layout.activity_kt_first)
 
         initView()
+
+        initData()
+    }
+
+    private fun initData() {
+
+        Util1.test1()
+
+        Util1.test2()
+
+        // Util4中定义的顶层方法，可直接调用
+        test1()
     }
 
     private fun initView() {
         button1.setOnClickListener {
-            showToast("hahha")
+            showToast("1233333")
         }
 
         button2.setOnClickListener {
@@ -34,19 +50,92 @@ class FirstActivity : AppCompatActivity() {
         }
 
         button4.setOnClickListener {
-            getDataFromAcivity()
+            getDataFromActivity()
+        }
+
+        button5.setOnClickListener {
+            showAlertDialog3()
         }
     }
+
+    private fun showAlertDialog() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("this is dialog")
+        builder.setMessage("this is msg")
+        builder.setCancelable(false)
+
+        builder.setPositiveButton("OK", DialogInterface.OnClickListener { dialog, which ->
+            MyLog.info("ok")
+        })
+
+        builder.setNegativeButton("cancel", DialogInterface.OnClickListener { dialog, which ->
+            MyLog.info("cancel")
+        })
+
+        builder.show()
+    }
+
+
+    private fun showAlertDialog2() {
+        AlertDialog.Builder(this).apply {
+            setTitle("this is dialog")
+            setMessage("this is msg")
+            setCancelable(false)
+            setPositiveButton("OK") { dialog, which ->
+                MyLog.info("ok")
+                MyLog.info("which:${which}")
+            }
+
+            setNegativeButton("cancel") { dialog, which ->
+                MyLog.info("cancel")
+                MyLog.info("which:${which}")
+            }
+
+            setNeutralButton("hhh") { dialog, which ->
+                MyLog.info("hhh")
+                MyLog.info("which:${which}")
+            }
+
+            show()
+        }
+    }
+
+    /**
+     * 男女选择对话框
+     */
+    private fun showAlertDialog3() {
+        val item = arrayOf("男", "女")
+        var currentItem: Int = 0
+        AlertDialog.Builder(this).apply {
+            setTitle("this is dialog")
+            setCancelable(false)
+            setSingleChoiceItems(item, 0) { dialog, which ->
+                currentItem = which
+                MyLog.info(item[which])
+            }
+            setPositiveButton("OK") { dialog, which ->
+                MyLog.info("ok")
+                MyLog.info("which:${which}")
+
+                MyLog.info("选中的是${item[currentItem]}")
+            }
+
+            show()
+        }
+
+    }
+
 
     private fun sendData2Activity() {
         val intent = Intent(this, KtSecondActivity::class.java)
         intent.putExtra("data", "FirstActivity data")
         startActivity(intent)
 
+//        KtSecondActivity.actionStart(this,"111","222")
     }
 
 
-    private fun getDataFromAcivity() {
+    private fun getDataFromActivity() {
         val intent = Intent(this, KtSecondActivity::class.java)
         startActivityForResult(intent, 1)
     }
