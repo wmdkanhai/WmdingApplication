@@ -124,7 +124,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="kotlin" />
+        <Button
+                android:onClick="fragmentTest"
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="fragment" />
 
     </LinearLayout>
+
+    <View
+            android:background="#ccc"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />¬¬¬
 
 </LinearLayout>

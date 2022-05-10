@@ -13,6 +13,7 @@ import com.wmding.commonlib.CommonActivity;
 import com.wmding.commonlib.utils.MemoryUtil;
 import com.wmding.commonlib.utils.MyLog;
 import com.wmding.contentresolverlib.ContentResolverActivity;
+import com.wmding.fragmentlib.FrMainActivity;
 import com.wmding.medialib.MediaActivity;
 import com.wmding.mykotlin.FirstActivity;
 import com.wmding.myviewlib.MyViewActivity;
@@ -98,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * 内容提供者
+     *
      * @param view
      */
     public void test6(View view) {
@@ -107,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * 多媒体相关
+     *
      * @param view
      */
     public void test7(View view) {
@@ -121,6 +124,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void kotlinTest(View view) {
         Intent intent = new Intent(this, com.wmding.mykotlin.FirstActivity.class);
+        startActivity(intent);
+    }
+
+    public void fragmentTest(View view) {
+        Intent intent = new Intent(this, FrMainActivity.class);
         startActivity(intent);
     }
 }
