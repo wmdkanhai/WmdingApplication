@@ -6,6 +6,18 @@
         android:layout_height="match_parent"
         tools:context=".CommonActivity">
 
+    <TextView
+            android:id="@+id/tv1"
+            android:text="hello"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintVertical_bias="0.01"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"/>
+
+
     <Button
             android:layout_margin="5dp"
             android:onClick="tes1"
@@ -14,37 +26,33 @@
             android:text="Activity相关"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.01"
-            app:layout_constraintVertical_bias="0.01"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/tv1"
             android:id="@+id/button1" />
-
 
     <Button
             android:id="@+id/button2"
             android:layout_margin="5dp"
             android:onClick="handler"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintHorizontal_bias="0.01"
-            app:layout_constraintVertical_bias="0.01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Handler"
-            app:layout_constraintStart_toEndOf="@+id/button1" />
+            app:layout_constraintStart_toEndOf="@+id/button1"
+            app:layout_constraintTop_toBottomOf="@+id/tv1" />
 
 
     <Button
             android:layout_margin="5dp"
             android:onClick="imageView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintHorizontal_bias="0.01"
-            app:layout_constraintVertical_bias="0.01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="图片加载"
-            app:layout_constraintStart_toEndOf="@+id/button2" />
+            app:layout_constraintStart_toEndOf="@+id/button2"
+            app:layout_constraintTop_toBottomOf="@+id/tv1" />
 
     <Button
             android:layout_margin="5dp"

@@ -5,17 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.facebook.device.yearclass.YearClass;
 import com.wmding.animationlib.AnimationActivity;
 import com.wmding.broadcastreceiverlib.ReceiverMenuActivity;
 import com.wmding.commonlib.CommonActivity;
+import com.wmding.commonlib.inject.InjectView;
 import com.wmding.commonlib.utils.MemoryUtil;
 import com.wmding.commonlib.utils.MyLog;
 import com.wmding.contentresolverlib.ContentResolverActivity;
 import com.wmding.fragmentlib.FrMainActivity;
 import com.wmding.medialib.MediaActivity;
-import com.wmding.mykotlin.FirstActivity;
 import com.wmding.myviewlib.MyViewActivity;
 import com.wmding.networklib.NetworkActivity;
 import com.wmding.servicelib.ServiceMainActivity;
@@ -23,6 +24,9 @@ import com.wmding.servicelib.ServiceMainActivity;
 import static com.wmding.commonlib.utils.AndroidUtil.printSystemInfo;
 
 public class MainActivity extends AppCompatActivity {
+
+    @InjectView(R.id.tv)
+    TextView tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

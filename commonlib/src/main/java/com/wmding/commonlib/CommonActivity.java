@@ -2,9 +2,16 @@ package com.wmding.commonlib;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
+
+import com.wmding.commonlib.inject.InjectUtils;
+import com.wmding.commonlib.inject.InjectView;
+
+import butterknife.BindView;
 
 /**
  * @author wmding
@@ -16,10 +23,16 @@ import android.view.View;
  */
 public class CommonActivity extends AppCompatActivity {
 
+    @InjectView(R2.id.tv1)
+    TextView tv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_common);
+
+        InjectUtils.injectView(this);
+        tv.setText("hjahahah");
     }
 
     /**
